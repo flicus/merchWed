@@ -1,0 +1,20 @@
+merch:
+  debug: true
+  username: evlampia_bot
+  token: 219739200:AAHXCuDWJPoRhUAjFBXFmljVJhR2uVXdmwc
+
+slyrack:
+  enable-state-management: true
+  enable-session-management: true
+  session-ttl-millis: 600000
+  default-bot.disabled: true
+
+logging.level.org.schors: debug
+logging.level.org.slyrack: debug
+logging.level.org.telegram: debug
+logging:
+  pattern:
+    rolling-file-name: /usr/app/logs/merch-%d{yyyy-MM-dd}.%i.log
+  file:
+    name: /usr/app/logs/merch.log
+    max-size: 1MB

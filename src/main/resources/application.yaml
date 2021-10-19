@@ -1,0 +1,52 @@
+cyprus.car.bot:
+  debug: false
+  greeting: Доброго времени суток,
+    Мы avtopodbor_cyprus - команда запустившая авто подбор на Кипре.
+    Для того чтобы принять заявку на автоподбор от вас, мы зададим вам пару вопросов, а потом лично свяжемся.
+  questions:
+    - question: "Какой бюджет на покупку авто (в EURO) вы рассматриваете?"
+    - question: "Какой бренды/модели вы рассматриваете?"
+    - question: "С какого года рассматриваете автомобиль? (например от 2010 года выпуска)"
+    - question: "Какие сроки у вас есть на поиск автомобиля вашей мечты?"
+    - question: "Нужна ли будет страховка?"
+      answer:
+        - "Да"
+        - "Нет"
+    - question: "Есть ли права Кипрские (европейские)?"
+      answer:
+        - "Да"
+        - "Нет"
+    - question: "Что бы вы хотели видеть в автомобиле мечты?"
+      answers:
+        - "Автомат"
+        - "Механика"
+        - "7 местный"
+        - "Джип (4х4)"
+        - "Семейный"
+        - "Спортивный"
+        - "Седан"
+        - "Хетчбэк"
+  farewell: Спасибо за отправку, мы свяжемся с вами.
+    Если есть срочный вопрос или мы вам не ответили в течении суток, то напишите
+    @seoserch или @tachat
+  cancel: Сессия завершена, начните заново или обратитесь к администраторам @seoserch или @tachat
+  username: name
+  token: token
+  admins:
+    - flicus
+
+slyrack:
+  enable-state-management: true
+  enable-session-management: true
+  session-ttl-millis: 600000
+  default-bot.disabled: true
+
+logging.level.org.schors: debug
+logging.level.org.slyrack: debug
+logging.level.org.telegram: debug
+logging:
+  pattern:
+    rolling-file-name: /usr/app/logs/cyprus.car-%d{yyyy-MM-dd}.%i.log
+  file:
+    name: /usr/app/logs/cyprus.car.log
+    max-size: 1MB
