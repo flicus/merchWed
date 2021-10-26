@@ -17,6 +17,7 @@ import org.telegram.telegrambots.meta.api.objects.User;
 import org.telegram.telegrambots.meta.bots.AbsSender;
 
 import java.util.List;
+import java.util.concurrent.Future;
 import java.util.stream.Collectors;
 
 @Controller
@@ -61,12 +62,14 @@ public class MarriageController {
               .append("\n");
         });
 
+        Future a = Future.
 
-        sender.execute(SendMessage.builder()
-                                  .parseMode(ParseMode.HTML)
-                                  .text(sb.toString())
-                                  .chatId(chatId)
-                                  .build());
+
+            sender.execute(SendMessage.builder()
+                                      .parseMode(ParseMode.HTML)
+                                      .text(sb.toString())
+                                      .chatId(chatId)
+                                      .build());
 
         return new ModelAndView("none");
     }
